@@ -1,0 +1,45 @@
+{
+  "case_id": "SHIP-2026-002",
+  "documents": [
+    {
+      "type": "commercial_invoice",
+      "fields": {
+        "invoice_number": "INV-2026-002",
+        "po_number": "PO-2026-088",
+        "supplier_name": "Green Valley Foods",
+        "buyer_name": "Riyadh Retail Co.",
+        "destination": "Riyadh",
+        "quantity": 220,
+        "currency": "USD",
+        "total_amount": 7600
+      }
+    },
+    {
+      "type": "packing_list",
+      "fields": {
+        "invoice_number": "INV-2026-002",
+        "po_number": "PO-2026-088",
+        "supplier_name": "Green Valley Foods",
+        "buyer_name": "Riyadh Retail Co.",
+        "destination": "Riyadh",
+        "quantity": 220,
+        "currency": "USD",
+        "total_amount": 7600
+      }
+    },
+    {
+      "type": "bank_payment_proof",
+      "fields": {
+        "invoice_number": "INV-2026-002",
+        "po_number": "PO-2026-088",
+        "supplier_name": "Green Valley Foods",
+        "buyer_name": "Riyadh Retail Co.",
+        "destination": "Riyadh",
+        "quantity": 220,
+        "currency": "USD",
+        "total_amount": 7600
+      }
+    }
+  ],
+  "intentional_issue": "low"
+}

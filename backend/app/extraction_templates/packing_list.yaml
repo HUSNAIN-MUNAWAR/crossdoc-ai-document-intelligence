@@ -1,0 +1,22 @@
+name: packing_list
+version: 2026.06
+required_fields:
+  - po_number
+  - supplier_name
+  - buyer_name
+  - destination
+  - quantity
+  - line_items
+optional_fields:
+  - subtotal
+  - tax
+  - discount
+  - hs_code
+confidence_threshold: 0.72
+validation_rules:
+  amount_fields: numeric
+  date_fields: iso_date
+  container_number: iso_6346_format_without_checksum
+source_hints:
+  key_value_area: true
+  line_items_area: true

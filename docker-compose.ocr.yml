@@ -1,0 +1,15 @@
+# Optional heavier OCR compose overlay. Use when you build backend images with
+# PaddleOCR/Tesseract system dependencies installed.
+services:
+  backend:
+    environment:
+      CROSSDOC_DEMO_OCR: "false"
+      ENABLE_PADDLEOCR: "true"
+      ENABLE_TESSERACT: "true"
+      ENABLE_DOCLING: "true"
+  worker:
+    environment:
+      CROSSDOC_DEMO_OCR: "false"
+      ENABLE_PADDLEOCR: "true"
+      ENABLE_TESSERACT: "true"
+      ENABLE_DOCLING: "true"

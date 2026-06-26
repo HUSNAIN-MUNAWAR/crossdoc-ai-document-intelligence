@@ -1,0 +1,53 @@
+{
+  "document_classification_accuracy": 1.0,
+  "field_extraction_exact_match": 1.0,
+  "field_extraction_normalized_match": 1.0,
+  "amount_tolerance_match": 0.242,
+  "table_row_count_accuracy": 1.0,
+  "line_item_extraction_score": 0.667,
+  "table_row_reconstruction_score": 1.0,
+  "average_ocr_confidence": 0.83,
+  "review_required_percentage": 0.03,
+  "reconciliation_issue_detection_count": 5,
+  "risk_issue_detection_count": 5,
+  "processing_time_per_document_seconds": 0.0,
+  "ocr_engine_availability_status": {
+    "paddleocr": {
+      "available": false,
+      "version": null,
+      "status": "not_installed"
+    },
+    "tesseract": {
+      "available": true,
+      "binary_available": true,
+      "pytesseract_available": true,
+      "version": "tesseract 5.5.0",
+      "status": "ready"
+    },
+    "docling": {
+      "available": false,
+      "version": null,
+      "status": "not_installed"
+    },
+    "layoutparser": {
+      "available": false,
+      "version": null,
+      "status": "optional_not_installed"
+    },
+    "poppler": {
+      "available": true,
+      "version": "pdfinfo version 25.06.0",
+      "status": "ready"
+    },
+    "opencv": {
+      "available": true,
+      "version": "4.13.0",
+      "status": "ready"
+    },
+    "demo_mode": {
+      "enabled": false,
+      "env_var": "CROSSDOC_DEMO_OCR"
+    },
+    "language": "en"
+  }
+}

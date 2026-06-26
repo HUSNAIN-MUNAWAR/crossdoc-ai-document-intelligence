@@ -1,0 +1,86 @@
+{
+  "case_id": "SHIP-2026-005",
+  "documents": [
+    {
+      "type": "commercial_invoice",
+      "fields": {
+        "invoice_number": "INV-2026-005",
+        "po_number": "PO-2026-105",
+        "supplier_name": "Atlas Trading Company",
+        "buyer_name": "Nexa Imports Limited",
+        "destination": "Dammam",
+        "quantity": 350,
+        "currency": "USD",
+        "total_amount": 12250
+      }
+    },
+    {
+      "type": "packing_list",
+      "fields": {
+        "invoice_number": "INV-2026-005",
+        "po_number": "PO-2026-105",
+        "supplier_name": "Atlas Trading Company",
+        "buyer_name": "Nexa Imports Limited",
+        "destination": "Dammam",
+        "quantity": 350,
+        "currency": "USD",
+        "total_amount": 12250
+      }
+    },
+    {
+      "type": "bill_of_lading",
+      "fields": {
+        "invoice_number": "INV-2026-005",
+        "po_number": "PO-2026-105",
+        "supplier_name": "Atlas Trading Company",
+        "buyer_name": "Nexa Imports Limited",
+        "destination": "Dammam",
+        "quantity": 350,
+        "currency": "USD",
+        "total_amount": 12250,
+        "bill_of_lading_number": "BL-2026-445",
+        "container_number": "MSCU12X4567"
+      }
+    },
+    {
+      "type": "purchase_order",
+      "fields": {
+        "invoice_number": "INV-2026-005",
+        "po_number": "PO-2026-105",
+        "supplier_name": "Atlas Trading Company",
+        "buyer_name": "Nexa Imports Limited",
+        "destination": "Dammam",
+        "quantity": 350,
+        "currency": "USD",
+        "total_amount": 12250
+      }
+    },
+    {
+      "type": "bank_payment_proof",
+      "fields": {
+        "invoice_number": "INV-2026-005",
+        "po_number": "PO-2026-105",
+        "supplier_name": "Atlas Trading Company",
+        "buyer_name": "Nexa Imports Limited",
+        "destination": "Dammam",
+        "quantity": 350,
+        "currency": "USD",
+        "total_amount": 12250
+      }
+    },
+    {
+      "type": "delivery_note",
+      "fields": {
+        "invoice_number": "INV-2026-005",
+        "po_number": "PO-2026-105",
+        "supplier_name": "Atlas Trading Company",
+        "buyer_name": "Nexa Imports Limited",
+        "destination": "Dammam",
+        "quantity": 350,
+        "currency": "USD",
+        "total_amount": 12250
+      }
+    }
+  ],
+  "intentional_issue": "invalid_container"
+}

@@ -1,0 +1,16 @@
+rules:
+  - id: quantity_match_invoice_packing_list
+    documents: [commercial_invoice, packing_list]
+    field: quantity
+    severity: high
+    enabled: true
+  - id: amount_match_invoice_payment_proof
+    documents: [commercial_invoice, bank_payment_proof]
+    field: total_amount
+    severity: high
+    enabled: true
+  - id: destination_match_invoice_bol
+    documents: [commercial_invoice, bill_of_lading]
+    field: destination
+    severity: medium
+    enabled: true

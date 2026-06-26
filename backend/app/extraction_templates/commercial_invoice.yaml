@@ -1,0 +1,23 @@
+name: commercial_invoice
+version: 2026.06
+required_fields:
+  - invoice_number
+  - supplier_name
+  - buyer_name
+  - invoice_date
+  - currency
+  - total_amount
+  - line_items
+optional_fields:
+  - subtotal
+  - tax
+  - discount
+  - hs_code
+confidence_threshold: 0.72
+validation_rules:
+  amount_fields: numeric
+  date_fields: iso_date
+  container_number: iso_6346_format_without_checksum
+source_hints:
+  key_value_area: true
+  line_items_area: true

@@ -1,0 +1,46 @@
+name: CrossDoc AI CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    env:
+      CROSSDOC_DEMO_OCR: "false"
+      ENABLE_PADDLEOCR: "false"
+      ENABLE_DOCLING: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install OCR system dependencies
+        run: sudo apt-get update && sudo apt-get install -y tesseract-ocr poppler-utils
+      - name: Install backend
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+      - name: Compile backend
+        run: cd backend && python -m compileall app
+      - name: Run tests
+        run: cd backend && pytest -q
+      - name: Run real Tesseract OCR smoke test
+        run: python scripts/validate_real_ocr.py
+      - name: Generate synthetic data
+        run: python scripts/generate_synthetic_docs.py --out sample_data/generated_cases --truth sample_data/ground_truth
+      - name: Evaluation smoke test
+        run: python scripts/evaluate_pipeline.py --sample-data sample_data/generated_cases --ground-truth sample_data/ground_truth --out metrics
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install frontend
+        run: cd frontend && npm ci
+      - name: Build frontend
+        run: cd frontend && npm run build

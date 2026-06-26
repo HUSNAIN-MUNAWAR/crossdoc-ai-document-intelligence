@@ -1,0 +1,86 @@
+{
+  "case_id": "SHIP-2026-004",
+  "documents": [
+    {
+      "type": "commercial_invoice",
+      "fields": {
+        "invoice_number": "INV-2026-004",
+        "po_number": "",
+        "supplier_name": "Blue Ocean Exporters Ltd",
+        "buyer_name": "Jeddah Market LLC",
+        "destination": "Jeddah",
+        "quantity": 900,
+        "currency": "SAR",
+        "total_amount": 91000
+      }
+    },
+    {
+      "type": "packing_list",
+      "fields": {
+        "invoice_number": "INV-2026-004",
+        "po_number": "",
+        "supplier_name": "Blue Ocean Exporters Ltd",
+        "buyer_name": "Jeddah Market LLC",
+        "destination": "Jeddah",
+        "quantity": 900,
+        "currency": "SAR",
+        "total_amount": 91000
+      }
+    },
+    {
+      "type": "bill_of_lading",
+      "fields": {
+        "invoice_number": "INV-2026-004",
+        "po_number": "",
+        "supplier_name": "Blue Ocean Exporters Ltd",
+        "buyer_name": "Jeddah Market LLC",
+        "destination": "Jeddah",
+        "quantity": 900,
+        "currency": "SAR",
+        "total_amount": 91000,
+        "bill_of_lading_number": "BL-2026-445",
+        "container_number": "OOLU7654321"
+      }
+    },
+    {
+      "type": "purchase_order",
+      "fields": {
+        "invoice_number": "INV-2026-004",
+        "po_number": "",
+        "supplier_name": "Blue Ocean Exporters Ltd",
+        "buyer_name": "Jeddah Market LLC",
+        "destination": "Jeddah",
+        "quantity": 900,
+        "currency": "SAR",
+        "total_amount": 91000
+      }
+    },
+    {
+      "type": "bank_payment_proof",
+      "fields": {
+        "invoice_number": "INV-2026-004",
+        "po_number": "",
+        "supplier_name": "Blue Ocean Exporters Ltd",
+        "buyer_name": "Jeddah Market LLC",
+        "destination": "Jeddah",
+        "quantity": 900,
+        "currency": "SAR",
+        "total_amount": 91000
+      }
+    },
+    {
+      "type": "delivery_note",
+      "fields": {
+        "invoice_number": "INV-2026-004",
+        "po_number": "",
+        "supplier_name": "Blue Ocean Exporters Ltd",
+        "buyer_name": "Jeddah Market LLC",
+        "destination": "Jeddah",
+        "quantity": 900,
+        "currency": "SAR",
+        "total_amount": 91000
+      }
+    }
+  ],
+  "intentional_issue": "missing_po"
+}

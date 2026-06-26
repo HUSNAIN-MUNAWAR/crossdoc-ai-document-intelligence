@@ -1,0 +1,45 @@
+{
+  "case_id": "FIN-2026-003",
+  "documents": [
+    {
+      "type": "commercial_invoice",
+      "fields": {
+        "invoice_number": "INV-2026-300",
+        "po_number": "PO-2026-300",
+        "supplier_name": "Metro Supplies Pvt Ltd",
+        "buyer_name": "Nexa Imports Ltd.",
+        "destination": "Dubai",
+        "quantity": 100,
+        "currency": "PKR",
+        "total_amount": 1250000
+      }
+    },
+    {
+      "type": "bank_payment_proof",
+      "fields": {
+        "invoice_number": "INV-2026-300",
+        "po_number": "PO-2026-300",
+        "supplier_name": "Metro Supplies Pvt Ltd",
+        "buyer_name": "Nexa Imports Ltd.",
+        "destination": "Dubai",
+        "quantity": 100,
+        "currency": "PKR",
+        "total_amount": 1200000
+      }
+    },
+    {
+      "type": "receipt",
+      "fields": {
+        "invoice_number": "INV-2026-300",
+        "po_number": "PO-2026-300",
+        "supplier_name": "Metro Supplies Pvt Ltd",
+        "buyer_name": "Nexa Imports Ltd.",
+        "destination": "Dubai",
+        "quantity": 100,
+        "currency": "PKR",
+        "total_amount": 1250000
+      }
+    }
+  ],
+  "intentional_issue": "amount_mismatch"
+}

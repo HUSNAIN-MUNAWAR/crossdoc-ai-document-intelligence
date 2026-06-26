@@ -1,0 +1,86 @@
+{
+  "case_id": "SHIP-2026-001",
+  "documents": [
+    {
+      "type": "commercial_invoice",
+      "fields": {
+        "invoice_number": "INV-2026-001",
+        "po_number": "PO-2026-077",
+        "supplier_name": "Atlas Trading Co.",
+        "buyer_name": "Nexa Imports Ltd.",
+        "destination": "Jeddah",
+        "quantity": 500,
+        "currency": "USD",
+        "total_amount": 18500
+      }
+    },
+    {
+      "type": "packing_list",
+      "fields": {
+        "invoice_number": "INV-2026-001",
+        "po_number": "PO-2026-077",
+        "supplier_name": "Atlas Trading Co.",
+        "buyer_name": "Nexa Imports Ltd.",
+        "destination": "Jeddah",
+        "quantity": 480,
+        "currency": "USD",
+        "total_amount": 18500
+      }
+    },
+    {
+      "type": "bill_of_lading",
+      "fields": {
+        "invoice_number": "INV-2026-001",
+        "po_number": "PO-2026-077",
+        "supplier_name": "Atlas Trading Co.",
+        "buyer_name": "Nexa Imports Ltd.",
+        "destination": "Jeddah",
+        "quantity": 500,
+        "currency": "USD",
+        "total_amount": 18500,
+        "bill_of_lading_number": "BL-2026-445",
+        "container_number": "MSCU1234567"
+      }
+    },
+    {
+      "type": "purchase_order",
+      "fields": {
+        "invoice_number": "INV-2026-001",
+        "po_number": "PO-2026-077",
+        "supplier_name": "Atlas Trading Co.",
+        "buyer_name": "Nexa Imports Ltd.",
+        "destination": "Jeddah",
+        "quantity": 500,
+        "currency": "USD",
+        "total_amount": 18500
+      }
+    },
+    {
+      "type": "bank_payment_proof",
+      "fields": {
+        "invoice_number": "INV-2026-001",
+        "po_number": "PO-2026-077",
+        "supplier_name": "Atlas Trading Co.",
+        "buyer_name": "Nexa Imports Ltd.",
+        "destination": "Jeddah",
+        "quantity": 500,
+        "currency": "USD",
+        "total_amount": 18000
+      }
+    },
+    {
+      "type": "delivery_note",
+      "fields": {
+        "invoice_number": "INV-2026-001",
+        "po_number": "PO-2026-077",
+        "supplier_name": "Atlas Trading Co.",
+        "buyer_name": "Nexa Imports Ltd.",
+        "destination": "Jeddah",
+        "quantity": 500,
+        "currency": "USD",
+        "total_amount": 18500
+      }
+    }
+  ],
+  "intentional_issue": "quantity_destination_amount_mismatch"
+}

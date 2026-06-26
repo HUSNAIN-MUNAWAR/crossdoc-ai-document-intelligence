@@ -1,0 +1,17 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+.next/
+.pytest_cache/
+.ruff_cache/
+**/.storage/
+exports/
+*.sqlite3
+coverage/
+.coverage
+logs/
+playwright-report/
+test-results/
+.DS_Store
