@@ -1,0 +1,361 @@
+{
+  "events": [
+    {
+      "detail": "Invoice, packing list, B/L, purchase order, delivery note, and payment proof share one synthetic case ID.",
+      "id": "ingest",
+      "metric": "6 documents \u00b7 source lineage retained",
+      "short": "Ingest",
+      "status": "received",
+      "title": "Six related documents enter one case"
+    },
+    {
+      "detail": "The manifest preserves the OCR router boundary; this deterministic run supplies synthetic blocks so post-OCR logic stays reproducible.",
+      "id": "ocr",
+      "metric": "avg confidence 84% \u00b7 tesseract not installed",
+      "short": "OCR",
+      "status": "evidence",
+      "title": "Evidence blocks become searchable"
+    },
+    {
+      "detail": "The repository classifier assigns logistics and finance types with keyword evidence.",
+      "id": "classify",
+      "metric": "6 types \u00b7 template 2026.06",
+      "short": "Classify",
+      "status": "typed",
+      "title": "Document types are identified"
+    },
+    {
+      "detail": "ExtractionEngine applies repository patterns, post-processing, confidence, and table reconstruction.",
+      "id": "extract",
+      "metric": "57 fields \u00b7 6 tables",
+      "short": "Extract",
+      "status": "normalized",
+      "title": "Fields and tables are normalized"
+    },
+    {
+      "detail": "ReconciliationEngine compares quantities, amounts, references, currencies, destinations, and duplicates.",
+      "id": "reconcile",
+      "metric": "8 issues \u00b7 quantity_mismatch, quantity_mismatch, amount_mismatch",
+      "short": "Reconcile",
+      "status": "flagged",
+      "title": "Cross-document mismatches surface"
+    },
+    {
+      "detail": "RiskEngine weights the findings and returns a review action instead of hiding the reason.",
+      "id": "risk",
+      "metric": "score 100 \u00b7 critical \u00b7 confidence 68%",
+      "short": "Risk",
+      "status": "scored",
+      "title": "Explainable risk is calculated"
+    },
+    {
+      "detail": "Top factors and evidence-linked recommended actions are presented for an operator decision.",
+      "id": "review",
+      "metric": "5 top factors \u00b7 action: review flagged fields",
+      "short": "Review",
+      "status": "human",
+      "title": "Human review packet is ready"
+    },
+    {
+      "detail": "The case remains a synthetic decision-support artifact; no customs, tax, payment, or carrier action is executed.",
+      "id": "export",
+      "metric": "JSON \u00b7 Markdown \u00b7 API-ready evidence",
+      "short": "Export",
+      "status": "safe",
+      "title": "Evidence can be exported safely"
+    }
+  ],
+  "fixture": "SHIP-2026-001",
+  "layout_preview": [
+    {
+      "filename": "commercial_invoice.png",
+      "regions": [
+        {
+          "bbox": {
+            "h": 154.0,
+            "w": 900.0,
+            "x": 80.0,
+            "y": 90.0
+          },
+          "confidence": 0.7,
+          "label": "header",
+          "method": "heuristic",
+          "page_number": 1,
+          "region_id": "r-header"
+        },
+        {
+          "bbox": {
+            "h": 406.0,
+            "w": 900.0,
+            "x": 80.0,
+            "y": 90.0
+          },
+          "confidence": 0.74,
+          "label": "key_value_area",
+          "method": "heuristic",
+          "page_number": 1,
+          "region_id": "r-key-values"
+        },
+        {
+          "bbox": {
+            "h": 448.0,
+            "w": 900.0,
+            "x": 80.0,
+            "y": 132.0
+          },
+          "confidence": 0.68,
+          "label": "table",
+          "method": "heuristic",
+          "page_number": 1,
+          "region_id": "r-table"
+        },
+        {
+          "bbox": {
+            "h": 448.0,
+            "w": 900.0,
+            "x": 80.0,
+            "y": 132.0
+          },
+          "confidence": 0.66,
+          "label": "line_items_area",
+          "method": "heuristic",
+          "page_number": 1,
+          "region_id": "r-line-items"
+        },
+        {
+          "bbox": {
+            "h": 532.0,
+            "w": 900.0,
+            "x": 80.0,
+            "y": 90.0
+          },
+          "confidence": 0.55,
+          "label": "paragraph",
+          "method": "heuristic",
+          "page_number": 1,
+          "region_id": "r-body"
+        }
+      ]
+    },
+    {
+      "filename": "packing_list.png",
+      "regions": [
+        {
+          "bbox": {
+            "h": 154.0,
+            "w": 900.0,
+            "x": 80.0,
+            "y": 90.0
+          },
+          "confidence": 0.7,
+          "label": "header",
+          "method": "heuristic",
+          "page_number": 1,
+          "region_id": "r-header"
+        },
+        {
+          "bbox": {
+            "h": 196.0,
+            "w": 900.0,
+            "x": 80.0,
+            "y": 216.0
+          },
+          "confidence": 0.74,
+          "label": "key_value_area",
+          "method": "heuristic",
+          "page_number": 1,
+          "region_id": "r-key-values"
+        },
+        {
+          "bbox": {
+            "h": 448.0,
+            "w": 900.0,
+            "x": 80.0,
+            "y": 174.0
+          },
+          "confidence": 0.68,
+          "label": "table",
+          "method": "heuristic",
+          "page_number": 1,
+          "region_id": "r-table"
+        },
+        {
+          "bbox": {
+            "h": 448.0,
+            "w": 900.0,
+            "x": 80.0,
+            "y": 174.0
+          },
+          "confidence": 0.66,
+          "label": "line_items_area",
+          "method": "heuristic",
+          "page_number": 1,
+          "region_id": "r-line-items"
+        },
+        {
+          "bbox": {
+            "h": 574.0,
+            "w": 900.0,
+            "x": 80.0,
+            "y": 90.0
+          },
+          "confidence": 0.55,
+          "label": "paragraph",
+          "method": "heuristic",
+          "page_number": 1,
+          "region_id": "r-body"
+        }
+      ]
+    }
+  ],
+  "model": {
+    "claim_boundary": "Deterministic post-OCR reference path; synthetic fixture metrics are not universal OCR accuracy claims.",
+    "classifier": "backend/app/services/document_classifier.py::DocumentClassifier",
+    "extraction": "backend/app/services/extraction_engine.py::ExtractionEngine",
+    "generator_input": "synthetic OCR evidence blocks; run scripts/validate_real_ocr.py for binary-backed OCR proof",
+    "layout": "backend/app/services/layout_detector.py::LayoutDetector(mode=heuristic)",
+    "ocr_preferred_engine": "tesseract",
+    "ocr_router": "backend/app/services/ocr_router.py::OCRRouter",
+    "reconciliation": "backend/app/services/reconciliation_engine.py::ReconciliationEngine",
+    "risk": "backend/app/services/risk_engine.py::RiskEngine",
+    "tesseract_binary_available": false
+  },
+  "pipeline": {
+    "classification_confidence_average": 0.825,
+    "document_types": [
+      "commercial_invoice",
+      "packing_list",
+      "bill_of_lading",
+      "purchase_order",
+      "bank_payment_proof",
+      "delivery_note"
+    ],
+    "layout_region_count": 30,
+    "ocr_confidence_average": 0.841,
+    "reconciliation_issue_count": 8,
+    "reconciliation_issue_types": [
+      "quantity_mismatch",
+      "quantity_mismatch",
+      "amount_mismatch",
+      "duplicate_invoice_reference",
+      "duplicate_invoice_reference",
+      "duplicate_invoice_reference",
+      "duplicate_invoice_reference",
+      "duplicate_invoice_reference"
+    ],
+    "risk": {
+      "confidence": 0.68,
+      "explanation": "Risk level is critical due mainly to: quantity_mismatch, quantity_mismatch, amount_mismatch.",
+      "factors": [
+        {
+          "explanation": "Quantity does not agree across shipment/commercial documents.",
+          "message": "commercial_invoice quantity is 500 but packing_list quantity is 1.",
+          "points": 25,
+          "severity": "high",
+          "type": "quantity_mismatch"
+        },
+        {
+          "explanation": "Quantity does not agree across shipment/commercial documents.",
+          "message": "packing_list quantity is 1 but bill_of_lading quantity is 500.",
+          "points": 25,
+          "severity": "high",
+          "type": "quantity_mismatch"
+        },
+        {
+          "explanation": "Financial amount differs across invoice, PO, or payment proof.",
+          "message": "commercial_invoice total is 18500 but bank_payment_proof total is 18000.",
+          "points": 25,
+          "severity": "high",
+          "type": "amount_mismatch"
+        },
+        {
+          "explanation": "Repeated invoice reference can indicate duplicate processing risk.",
+          "message": "Invoice number INV-2026-001 appears in multiple documents/cases.",
+          "points": 10,
+          "severity": "medium",
+          "type": "duplicate_invoice_reference"
+        },
+        {
+          "explanation": "Repeated invoice reference can indicate duplicate processing risk.",
+          "message": "Invoice number INV-2026-001 appears in multiple documents/cases.",
+          "points": 10,
+          "severity": "medium",
+          "type": "duplicate_invoice_reference"
+        },
+        {
+          "explanation": "Repeated invoice reference can indicate duplicate processing risk.",
+          "message": "Invoice number INV-2026-001 appears in multiple documents/cases.",
+          "points": 10,
+          "severity": "medium",
+          "type": "duplicate_invoice_reference"
+        },
+        {
+          "explanation": "Repeated invoice reference can indicate duplicate processing risk.",
+          "message": "Invoice number INV-2026-001 appears in multiple documents/cases.",
+          "points": 10,
+          "severity": "medium",
+          "type": "duplicate_invoice_reference"
+        },
+        {
+          "explanation": "Repeated invoice reference can indicate duplicate processing risk.",
+          "message": "Invoice number INV-2026-001 appears in multiple documents/cases.",
+          "points": 10,
+          "severity": "medium",
+          "type": "duplicate_invoice_reference"
+        }
+      ],
+      "level": "critical",
+      "recommended_action": "Block approval until critical mismatches are resolved.",
+      "recommended_actions": [
+        "Block approval until critical mismatches are resolved."
+      ],
+      "score": 100,
+      "top_factors": [
+        {
+          "explanation": "Quantity does not agree across shipment/commercial documents.",
+          "message": "commercial_invoice quantity is 500 but packing_list quantity is 1.",
+          "points": 25,
+          "severity": "high",
+          "type": "quantity_mismatch"
+        },
+        {
+          "explanation": "Quantity does not agree across shipment/commercial documents.",
+          "message": "packing_list quantity is 1 but bill_of_lading quantity is 500.",
+          "points": 25,
+          "severity": "high",
+          "type": "quantity_mismatch"
+        },
+        {
+          "explanation": "Financial amount differs across invoice, PO, or payment proof.",
+          "message": "commercial_invoice total is 18500 but bank_payment_proof total is 18000.",
+          "points": 25,
+          "severity": "high",
+          "type": "amount_mismatch"
+        },
+        {
+          "explanation": "Repeated invoice reference can indicate duplicate processing risk.",
+          "message": "Invoice number INV-2026-001 appears in multiple documents/cases.",
+          "points": 10,
+          "severity": "medium",
+          "type": "duplicate_invoice_reference"
+        },
+        {
+          "explanation": "Repeated invoice reference can indicate duplicate processing risk.",
+          "message": "Invoice number INV-2026-001 appears in multiple documents/cases.",
+          "points": 10,
+          "severity": "medium",
+          "type": "duplicate_invoice_reference"
+        }
+      ]
+    }
+  },
+  "schema_version": "1.0",
+  "source": {
+    "bytes": 2330,
+    "document_count": 6,
+    "intentional_issue": "quantity_destination_amount_mismatch",
+    "path": "sample_data/ground_truth/SHIP-2026-001.json",
+    "sha256": "b35af5db570c3ef97fbd8453ccece6298e4a61fe9147d37d5336c83ea5dc861b",
+    "synthetic": true
+  }
+}

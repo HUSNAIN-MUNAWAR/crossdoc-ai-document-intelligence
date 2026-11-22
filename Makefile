@@ -26,6 +26,8 @@ screenshots:
 	cd frontend && npm run screenshots
 test:
 	cd backend && pytest -q
+animation:
+	python scripts/generate_reconciliation_animation.py
 lint:
 	cd backend && python -m compileall app
 frontend-build:

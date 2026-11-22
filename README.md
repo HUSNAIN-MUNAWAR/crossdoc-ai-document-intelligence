@@ -193,6 +193,16 @@ Every image below is captured from the running production build by
 |---|---|
 | ![OCR engine health screen](docs/screenshots/04_system_health.png) | ![Responsive mobile dashboard](docs/screenshots/05_dashboard_mobile.png) |
 
+## Synthetic reconciliation reference reel
+
+The repository includes a reproducible animation of the cross-document decision path at [`frontend/public/animation/crossdoc-reconciliation-reel.html`](frontend/public/animation/crossdoc-reconciliation-reel.html). It executes the real classifier, extraction, layout, reconciliation, and risk services against the committed `SHIP-2026-001` synthetic ground-truth case.
+
+```bash
+python scripts/generate_reconciliation_animation.py
+```
+
+The source checksum, service/model references, issue types, risk output, and scene metrics are recorded in [`docs/animation/crossdoc_reconciliation_sequence.json`](docs/animation/crossdoc_reconciliation_sequence.json). The generator uses synthetic OCR evidence blocks when Tesseract is unavailable; run `python scripts/validate_real_ocr.py` separately for the binary-backed OCR proof.
+
 ## Technology
 
 | Layer | Technologies |
