@@ -203,6 +203,33 @@ python scripts/generate_reconciliation_animation.py
 
 The source checksum, service/model references, issue types, risk output, and scene metrics are recorded in [`docs/animation/crossdoc_reconciliation_sequence.json`](docs/animation/crossdoc_reconciliation_sequence.json). The generator uses synthetic OCR evidence blocks when Tesseract is unavailable; run `python scripts/validate_real_ocr.py` separately for the binary-backed OCR proof.
 
+### Real OCR runtime evidence
+
+The strict runtime trace uses the local Tesseract engine on the committed clean
+PNG inputs for all six documents in `SHIP-2026-001`:
+
+```powershell
+py -3.12 -u scripts/generate_real_runtime_video.py
+# or: make runtime-evidence
+```
+
+Outputs:
+
+```text
+docs/animation/runtime-evidence/crossdoc-runtime.mp4
+docs/animation/runtime-evidence/crossdoc-runtime-poster.png
+docs/animation/runtime-evidence/crossdoc-ocr-blocks.csv
+docs/animation/runtime-evidence/crossdoc-runtime-summary.json
+```
+
+This path records real Tesseract blocks, confidence, bounding boxes, document
+classification, extracted fields, reconciliation issues, and risk output. The
+captured run produced 209 OCR blocks, 6 reconciliation issues, and risk 100;
+31 field comparisons differed from the committed ground truth and remain
+visible in the report. Demo OCR was disabled. These are synthetic fixture
+results, not universal OCR or production accuracy claims. The older HTML reel
+uses synthetic OCR blocks and is not counted as real OCR evidence.
+
 ## Technology
 
 | Layer | Technologies |

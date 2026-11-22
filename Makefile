@@ -28,6 +28,8 @@ test:
 	cd backend && pytest -q
 animation:
 	python scripts/generate_reconciliation_animation.py
+runtime-evidence:
+	python scripts/generate_real_runtime_video.py
 lint:
 	cd backend && python -m compileall app
 frontend-build:

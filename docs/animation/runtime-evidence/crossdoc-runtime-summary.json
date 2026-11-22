@@ -1,0 +1,2753 @@
+{
+  "run_type": "crossdoc_real_tesseract_runtime_video",
+  "generated_at_utc": "2026-11-22T15:47:39.450901+00:00",
+  "command": "py -3.12 -u scripts/generate_real_runtime_video.py",
+  "source": {
+    "ground_truth": "sample_data\\ground_truth\\SHIP-2026-001.json",
+    "ground_truth_sha256": "b35af5db570c3ef97fbd8453ccece6298e4a61fe9147d37d5336c83ea5dc861b",
+    "image_case_root": "sample_data\\generated_cases\\SHIP-2026-001",
+    "document_count": 6
+  },
+  "model": {
+    "engine": "tesseract",
+    "version": "tesseract v5.4.0.20240606",
+    "language": "en",
+    "binary": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+    "traineddata": "C:\\Program Files\\Tesseract-OCR\\tessdata\\eng.traineddata",
+    "demo_ocr_used": false,
+    "learned_checkpoint": "eng.traineddata",
+    "traineddata_sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+  },
+  "runtime": {
+    "python": "3.12.10",
+    "opencv": "4.13.0",
+    "numpy": "2.5.1",
+    "platform": "Windows-11-10.0.22631-SP0",
+    "device": "cpu"
+  },
+  "ocr_health": {
+    "paddleocr": {
+      "available": false,
+      "version": null,
+      "status": "not_installed"
+    },
+    "tesseract": {
+      "available": true,
+      "binary_available": true,
+      "pytesseract_available": true,
+      "version": "tesseract v5.4.0.20240606",
+      "status": "ready"
+    },
+    "docling": {
+      "available": false,
+      "version": null,
+      "status": "not_installed"
+    },
+    "layoutparser": {
+      "available": false,
+      "version": null,
+      "status": "optional_not_installed"
+    },
+    "poppler": {
+      "available": false,
+      "version": null,
+      "status": "not_found"
+    },
+    "opencv": {
+      "available": true,
+      "version": "4.13.0",
+      "status": "ready"
+    },
+    "demo_mode": {
+      "enabled": false,
+      "env_var": "CROSSDOC_DEMO_OCR"
+    },
+    "language": "en"
+  },
+  "documents": [
+    {
+      "document_type": "commercial_invoice",
+      "filename": "commercial_invoice_clean.png",
+      "source_sha256": "20989b84ad6a39a87eb030b3d8cba146aae91ef4f2a051bc1d925b2fd6807103",
+      "ocr_engine": [
+        "tesseract"
+      ],
+      "ocr_block_count": 35,
+      "ocr_confidence": 0.599143,
+      "ocr_text": "COMMERCIAL\nINVOICE\nInvoice\nNumber:\nINV.2026001\nPONumber:\nPO-2026.077\nSupplier\nAtlas\nTrading\nCa\nBuyer:\nNexa\nImports\nLid.\nDestination:\nJeddah\nQuantity\n500\n\u2018Tal\nAmount\nUSD\n18.500\nSKU\nDescription\n\u2014\nQty\nUnit\nTotal\nBG-100\nBaguette\nays\n500\n37\n18600",
+      "classification_confidence": 0.5,
+      "classification_evidence": [
+        "invoice"
+      ],
+      "fields": {
+        "invoice_number": {
+          "raw_value": "INV.2026001",
+          "normalized_value": "INV-2026001",
+          "confidence": 0.23,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "po_number": {
+          "raw_value": "PO-2026.077",
+          "normalized_value": "PO-2026-077",
+          "confidence": 0.41,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "supplier_name": {
+          "raw_value": "Atlas Trading Ca",
+          "normalized_value": "Atlas Trading Ca",
+          "confidence": 0.663,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "buyer_name": {
+          "raw_value": "Nexa Imports Lid.",
+          "normalized_value": "Nexa Imports Lid",
+          "confidence": 0.82,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "destination": {
+          "raw_value": "Jeddah",
+          "normalized_value": "Jeddah",
+          "confidence": 0.7,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "currency": {
+          "raw_value": "USD",
+          "normalized_value": "USD",
+          "confidence": 0.95,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "quantity": {
+          "raw_value": "500",
+          "normalized_value": 500,
+          "confidence": 0.663,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "line_items": {
+          "raw_value": [
+            {
+              "cells": [
+                "COMMERCIAL",
+                "INVOICE"
+              ],
+              "raw_text": "COMMERCIAL | INVOICE"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2026.077"
+              ],
+              "raw_text": "PONumber: | PO-2026.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "normalized_value": [
+            {
+              "cells": [
+                "COMMERCIAL",
+                "INVOICE"
+              ],
+              "raw_text": "COMMERCIAL | INVOICE"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2026.077"
+              ],
+              "raw_text": "PONumber: | PO-2026.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "confidence": 0.92,
+          "source_page": 1,
+          "bbox": {
+            "x": 86.0,
+            "y": 92.0,
+            "w": 206.0,
+            "h": 562.0
+          },
+          "warnings": [
+            "repaired_broken_numeric_or_amount_cells"
+          ]
+        }
+      },
+      "tables": [
+        {
+          "table_name": "reconstructed_table",
+          "columns": [
+            "col_1",
+            "col_2",
+            "col_3"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "COMMERCIAL",
+                "INVOICE"
+              ],
+              "raw_text": "COMMERCIAL | INVOICE"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2026.077"
+              ],
+              "raw_text": "PONumber: | PO-2026.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "header_row_index": null,
+          "confidence": 0.92,
+          "warnings": [
+            "repaired_broken_numeric_or_amount_cells"
+          ],
+          "source_page": 1,
+          "source_bbox": {
+            "x": 86.0,
+            "y": 92.0,
+            "w": 206.0,
+            "h": 562.0
+          },
+          "likely_totals_row": 8
+        }
+      ],
+      "missing_required_fields": [
+        "invoice_date",
+        "total_amount",
+        "subtotal",
+        "tax",
+        "discount",
+        "hs_code"
+      ],
+      "layout_region_count": 5,
+      "ground_truth_mismatches": {
+        "invoice_number": {
+          "expected": "INV-2026-001",
+          "actual": "INV-2026001"
+        },
+        "supplier_name": {
+          "expected": "Atlas Trading Co.",
+          "actual": "Atlas Trading Ca"
+        },
+        "buyer_name": {
+          "expected": "Nexa Imports Ltd.",
+          "actual": "Nexa Imports Lid"
+        },
+        "total_amount": {
+          "expected": 18500,
+          "actual": null
+        }
+      },
+      "quality_score": 0.599143
+    },
+    {
+      "document_type": "commercial_invoice",
+      "filename": "packing_list_clean.png",
+      "source_sha256": "2cc3e6320fab10f314939b3211bea031462d7cce92d9ae41fbffb41a973a17a5",
+      "ocr_engine": [
+        "tesseract"
+      ],
+      "ocr_block_count": 35,
+      "ocr_confidence": 0.598571,
+      "ocr_text": "PACKING\nLIST\nInvoice\nNumber:\nINV.2026001\nPONumber:\nPO-2028.077\nSupplier\nAtlas\nTrading\nCa\nBuyer:\nNexa\nImports\nLid.\nDestination:\nJeddah\nQuantity\n500\n\u2018Tal\nAmount\nUSD\n18.500\nSKU\nDescription\n\u2014\nQty\nUnit\nTotal\nBG-100\nBaguette\nays\n500\n37\n18600",
+      "classification_confidence": 0.5,
+      "classification_evidence": [
+        "invoice"
+      ],
+      "fields": {
+        "invoice_number": {
+          "raw_value": "INV.2026001",
+          "normalized_value": "INV-2026001",
+          "confidence": 0.06,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "po_number": {
+          "raw_value": "PO-2028.077",
+          "normalized_value": "PO-2028-077",
+          "confidence": 0.35,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "supplier_name": {
+          "raw_value": "Atlas Trading Ca",
+          "normalized_value": "Atlas Trading Ca",
+          "confidence": 0.727,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "buyer_name": {
+          "raw_value": "Nexa Imports Lid.",
+          "normalized_value": "Nexa Imports Lid",
+          "confidence": 0.82,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "destination": {
+          "raw_value": "Jeddah",
+          "normalized_value": "Jeddah",
+          "confidence": 0.7,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "currency": {
+          "raw_value": "USD",
+          "normalized_value": "USD",
+          "confidence": 0.95,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "quantity": {
+          "raw_value": "500",
+          "normalized_value": 500,
+          "confidence": 0.663,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "line_items": {
+          "raw_value": [
+            {
+              "cells": [
+                "PACKING",
+                "LIST"
+              ],
+              "raw_text": "PACKING | LIST"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2028.077"
+              ],
+              "raw_text": "PONumber: | PO-2028.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "normalized_value": [
+            {
+              "cells": [
+                "PACKING",
+                "LIST"
+              ],
+              "raw_text": "PACKING | LIST"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2028.077"
+              ],
+              "raw_text": "PONumber: | PO-2028.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "confidence": 0.92,
+          "source_page": 1,
+          "bbox": {
+            "x": 86.0,
+            "y": 92.0,
+            "w": 206.0,
+            "h": 562.0
+          },
+          "warnings": [
+            "repaired_broken_numeric_or_amount_cells"
+          ]
+        }
+      },
+      "tables": [
+        {
+          "table_name": "reconstructed_table",
+          "columns": [
+            "col_1",
+            "col_2",
+            "col_3"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "PACKING",
+                "LIST"
+              ],
+              "raw_text": "PACKING | LIST"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2028.077"
+              ],
+              "raw_text": "PONumber: | PO-2028.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "header_row_index": null,
+          "confidence": 0.92,
+          "warnings": [
+            "repaired_broken_numeric_or_amount_cells"
+          ],
+          "source_page": 1,
+          "source_bbox": {
+            "x": 86.0,
+            "y": 92.0,
+            "w": 206.0,
+            "h": 562.0
+          },
+          "likely_totals_row": 8
+        }
+      ],
+      "missing_required_fields": [
+        "invoice_date",
+        "total_amount",
+        "subtotal",
+        "tax",
+        "discount",
+        "hs_code"
+      ],
+      "layout_region_count": 5,
+      "ground_truth_mismatches": {
+        "invoice_number": {
+          "expected": "INV-2026-001",
+          "actual": "INV-2026001"
+        },
+        "po_number": {
+          "expected": "PO-2026-077",
+          "actual": "PO-2028-077"
+        },
+        "supplier_name": {
+          "expected": "Atlas Trading Co.",
+          "actual": "Atlas Trading Ca"
+        },
+        "buyer_name": {
+          "expected": "Nexa Imports Ltd.",
+          "actual": "Nexa Imports Lid"
+        },
+        "quantity": {
+          "expected": 480,
+          "actual": 500
+        },
+        "total_amount": {
+          "expected": 18500,
+          "actual": null
+        }
+      },
+      "quality_score": 0.598571
+    },
+    {
+      "document_type": "commercial_invoice",
+      "filename": "bill_of_lading_clean.png",
+      "source_sha256": "39e9dcc75676c8f9114204d46149d37655944e114c7cb6270ada0722a8cb0373",
+      "ocr_engine": [
+        "tesseract"
+      ],
+      "ocr_block_count": 35,
+      "ocr_confidence": 0.582571,
+      "ocr_text": "BILLOF\nLADING\nInvoice\nNumber:\nINV.2026001\nPONumber:\nPO-2026.077\nSupplier\nAtlas\nTrading\nCa\nBuyer:\nNexa\nImports\nLid.\nDestination:\nJeddah\nQuantity\n500\n\u2018Tal\nAmount\nUSD\n18.500\nSKU\nDescription\n\u2014\nQty\nUnit\nTotal\nBG-100\nBaguette\nays\n500\n37\n18600",
+      "classification_confidence": 0.5,
+      "classification_evidence": [
+        "invoice"
+      ],
+      "fields": {
+        "invoice_number": {
+          "raw_value": "INV.2026001",
+          "normalized_value": "INV-2026001",
+          "confidence": 0.25,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "po_number": {
+          "raw_value": "PO-2026.077",
+          "normalized_value": "PO-2026-077",
+          "confidence": 0.36,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "supplier_name": {
+          "raw_value": "Atlas Trading Ca",
+          "normalized_value": "Atlas Trading Ca",
+          "confidence": 0.623,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "buyer_name": {
+          "raw_value": "Nexa Imports Lid.",
+          "normalized_value": "Nexa Imports Lid",
+          "confidence": 0.82,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "destination": {
+          "raw_value": "Jeddah",
+          "normalized_value": "Jeddah",
+          "confidence": 0.7,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "currency": {
+          "raw_value": "USD",
+          "normalized_value": "USD",
+          "confidence": 0.95,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "quantity": {
+          "raw_value": "500",
+          "normalized_value": 500,
+          "confidence": 0.663,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "line_items": {
+          "raw_value": [
+            {
+              "cells": [
+                "BILLOF",
+                "LADING"
+              ],
+              "raw_text": "BILLOF | LADING"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2026.077"
+              ],
+              "raw_text": "PONumber: | PO-2026.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "normalized_value": [
+            {
+              "cells": [
+                "BILLOF",
+                "LADING"
+              ],
+              "raw_text": "BILLOF | LADING"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2026.077"
+              ],
+              "raw_text": "PONumber: | PO-2026.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "confidence": 0.92,
+          "source_page": 1,
+          "bbox": {
+            "x": 86.0,
+            "y": 92.0,
+            "w": 206.0,
+            "h": 562.0
+          },
+          "warnings": [
+            "repaired_broken_numeric_or_amount_cells"
+          ]
+        }
+      },
+      "tables": [
+        {
+          "table_name": "reconstructed_table",
+          "columns": [
+            "col_1",
+            "col_2",
+            "col_3"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "BILLOF",
+                "LADING"
+              ],
+              "raw_text": "BILLOF | LADING"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2026.077"
+              ],
+              "raw_text": "PONumber: | PO-2026.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "header_row_index": null,
+          "confidence": 0.92,
+          "warnings": [
+            "repaired_broken_numeric_or_amount_cells"
+          ],
+          "source_page": 1,
+          "source_bbox": {
+            "x": 86.0,
+            "y": 92.0,
+            "w": 206.0,
+            "h": 562.0
+          },
+          "likely_totals_row": 8
+        }
+      ],
+      "missing_required_fields": [
+        "invoice_date",
+        "total_amount",
+        "subtotal",
+        "tax",
+        "discount",
+        "hs_code"
+      ],
+      "layout_region_count": 5,
+      "ground_truth_mismatches": {
+        "invoice_number": {
+          "expected": "INV-2026-001",
+          "actual": "INV-2026001"
+        },
+        "supplier_name": {
+          "expected": "Atlas Trading Co.",
+          "actual": "Atlas Trading Ca"
+        },
+        "buyer_name": {
+          "expected": "Nexa Imports Ltd.",
+          "actual": "Nexa Imports Lid"
+        },
+        "total_amount": {
+          "expected": 18500,
+          "actual": null
+        },
+        "bill_of_lading_number": {
+          "expected": "BL-2026-445",
+          "actual": null
+        },
+        "container_number": {
+          "expected": "MSCU1234567",
+          "actual": null
+        }
+      },
+      "quality_score": 0.582571
+    },
+    {
+      "document_type": "commercial_invoice",
+      "filename": "purchase_order_clean.png",
+      "source_sha256": "f0814326c98232caf42362b41da61498718d591fd61200a6a5b97ac1eb714a94",
+      "ocr_engine": [
+        "tesseract"
+      ],
+      "ocr_block_count": 34,
+      "ocr_confidence": 0.591176,
+      "ocr_text": "PURCHASEORDER\nInvoice\nNumber:\nINV.2026001\nPONumber:\nPO-2028.077\nSupplier\nAtlas\nTrading\nCa\nBuyer:\nNexa\nImports\nLid.\nDestination:\nJeddah\nQuantity\n500\n\u2018Tal\nAmount\nUSD\n18.500\nSKU\nDescription\n\u2014\nQty\nUnit\nTotal\nBG-100\nBaguette\nays\n500\n37\n18600",
+      "classification_confidence": 0.5,
+      "classification_evidence": [
+        "invoice"
+      ],
+      "fields": {
+        "invoice_number": {
+          "raw_value": "INV.2026001",
+          "normalized_value": "INV-2026001",
+          "confidence": 0.34,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "po_number": {
+          "raw_value": "PO-2028.077",
+          "normalized_value": "PO-2028-077",
+          "confidence": 0.41,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "supplier_name": {
+          "raw_value": "Atlas Trading Ca",
+          "normalized_value": "Atlas Trading Ca",
+          "confidence": 0.763,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "buyer_name": {
+          "raw_value": "Nexa Imports Lid.",
+          "normalized_value": "Nexa Imports Lid",
+          "confidence": 0.82,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "destination": {
+          "raw_value": "Jeddah",
+          "normalized_value": "Jeddah",
+          "confidence": 0.7,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "currency": {
+          "raw_value": "USD",
+          "normalized_value": "USD",
+          "confidence": 0.95,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "quantity": {
+          "raw_value": "500",
+          "normalized_value": 500,
+          "confidence": 0.663,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "line_items": {
+          "raw_value": [
+            {
+              "cells": [
+                "PURCHASEORDER"
+              ],
+              "raw_text": "PURCHASEORDER"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2028.077"
+              ],
+              "raw_text": "PONumber: | PO-2028.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "normalized_value": [
+            {
+              "cells": [
+                "PURCHASEORDER"
+              ],
+              "raw_text": "PURCHASEORDER"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2028.077"
+              ],
+              "raw_text": "PONumber: | PO-2028.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "confidence": 0.92,
+          "source_page": 1,
+          "bbox": {
+            "x": 86.0,
+            "y": 92.0,
+            "w": 206.0,
+            "h": 562.0
+          },
+          "warnings": [
+            "repaired_broken_numeric_or_amount_cells"
+          ]
+        }
+      },
+      "tables": [
+        {
+          "table_name": "reconstructed_table",
+          "columns": [
+            "col_1",
+            "col_2",
+            "col_3"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "PURCHASEORDER"
+              ],
+              "raw_text": "PURCHASEORDER"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2028.077"
+              ],
+              "raw_text": "PONumber: | PO-2028.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "header_row_index": null,
+          "confidence": 0.92,
+          "warnings": [
+            "repaired_broken_numeric_or_amount_cells"
+          ],
+          "source_page": 1,
+          "source_bbox": {
+            "x": 86.0,
+            "y": 92.0,
+            "w": 206.0,
+            "h": 562.0
+          },
+          "likely_totals_row": 8
+        }
+      ],
+      "missing_required_fields": [
+        "invoice_date",
+        "total_amount",
+        "subtotal",
+        "tax",
+        "discount",
+        "hs_code"
+      ],
+      "layout_region_count": 5,
+      "ground_truth_mismatches": {
+        "invoice_number": {
+          "expected": "INV-2026-001",
+          "actual": "INV-2026001"
+        },
+        "po_number": {
+          "expected": "PO-2026-077",
+          "actual": "PO-2028-077"
+        },
+        "supplier_name": {
+          "expected": "Atlas Trading Co.",
+          "actual": "Atlas Trading Ca"
+        },
+        "buyer_name": {
+          "expected": "Nexa Imports Ltd.",
+          "actual": "Nexa Imports Lid"
+        },
+        "total_amount": {
+          "expected": 18500,
+          "actual": null
+        }
+      },
+      "quality_score": 0.591176
+    },
+    {
+      "document_type": "commercial_invoice",
+      "filename": "bank_payment_proof_clean.png",
+      "source_sha256": "4b371561dfff60049fcca8c4784ea60d61cc4fee616f71f6983b815f9dfc9fde",
+      "ocr_engine": [
+        "tesseract"
+      ],
+      "ocr_block_count": 35,
+      "ocr_confidence": 0.568571,
+      "ocr_text": "BANK\nPAYMENTPROOF\nInvoice\nNumber:\nINV.2026001\nPONumber:\nPO-2028.077\nSupplier\nAtlas\nTrading\nCa\nBuyer:\nNexa\nImports\nLid.\nDestination:\nJeddah\nQuantity\n500\n\u2018Tal\nAmount\nUSD\n18.500\nSKU\nDescription\n\u2014\nQty\nUnit\nTotal\nBG-100\nBaguette\nays\n500\n37\n18600",
+      "classification_confidence": 0.5,
+      "classification_evidence": [
+        "invoice"
+      ],
+      "fields": {
+        "invoice_number": {
+          "raw_value": "INV.2026001",
+          "normalized_value": "INV-2026001",
+          "confidence": 0.15,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "po_number": {
+          "raw_value": "PO-2028.077",
+          "normalized_value": "PO-2028-077",
+          "confidence": 0.38,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "supplier_name": {
+          "raw_value": "Atlas Trading Ca",
+          "normalized_value": "Atlas Trading Ca",
+          "confidence": 0.663,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "buyer_name": {
+          "raw_value": "Nexa Imports Lid.",
+          "normalized_value": "Nexa Imports Lid",
+          "confidence": 0.82,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "destination": {
+          "raw_value": "Jeddah",
+          "normalized_value": "Jeddah",
+          "confidence": 0.7,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "currency": {
+          "raw_value": "USD",
+          "normalized_value": "USD",
+          "confidence": 0.95,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "quantity": {
+          "raw_value": "500",
+          "normalized_value": 500,
+          "confidence": 0.663,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "line_items": {
+          "raw_value": [
+            {
+              "cells": [
+                "BANK",
+                "PAYMENTPROOF"
+              ],
+              "raw_text": "BANK | PAYMENTPROOF"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2028.077"
+              ],
+              "raw_text": "PONumber: | PO-2028.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "normalized_value": [
+            {
+              "cells": [
+                "BANK",
+                "PAYMENTPROOF"
+              ],
+              "raw_text": "BANK | PAYMENTPROOF"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2028.077"
+              ],
+              "raw_text": "PONumber: | PO-2028.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "confidence": 0.92,
+          "source_page": 1,
+          "bbox": {
+            "x": 86.0,
+            "y": 92.0,
+            "w": 206.0,
+            "h": 562.0
+          },
+          "warnings": [
+            "repaired_broken_numeric_or_amount_cells"
+          ]
+        }
+      },
+      "tables": [
+        {
+          "table_name": "reconstructed_table",
+          "columns": [
+            "col_1",
+            "col_2",
+            "col_3"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "BANK",
+                "PAYMENTPROOF"
+              ],
+              "raw_text": "BANK | PAYMENTPROOF"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2028.077"
+              ],
+              "raw_text": "PONumber: | PO-2028.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "header_row_index": null,
+          "confidence": 0.92,
+          "warnings": [
+            "repaired_broken_numeric_or_amount_cells"
+          ],
+          "source_page": 1,
+          "source_bbox": {
+            "x": 86.0,
+            "y": 92.0,
+            "w": 206.0,
+            "h": 562.0
+          },
+          "likely_totals_row": 8
+        }
+      ],
+      "missing_required_fields": [
+        "invoice_date",
+        "total_amount",
+        "subtotal",
+        "tax",
+        "discount",
+        "hs_code"
+      ],
+      "layout_region_count": 5,
+      "ground_truth_mismatches": {
+        "invoice_number": {
+          "expected": "INV-2026-001",
+          "actual": "INV-2026001"
+        },
+        "po_number": {
+          "expected": "PO-2026-077",
+          "actual": "PO-2028-077"
+        },
+        "supplier_name": {
+          "expected": "Atlas Trading Co.",
+          "actual": "Atlas Trading Ca"
+        },
+        "buyer_name": {
+          "expected": "Nexa Imports Ltd.",
+          "actual": "Nexa Imports Lid"
+        },
+        "total_amount": {
+          "expected": 18000,
+          "actual": null
+        }
+      },
+      "quality_score": 0.568571
+    },
+    {
+      "document_type": "commercial_invoice",
+      "filename": "delivery_note_clean.png",
+      "source_sha256": "2dc74dc607ce3b28cf2865086345ec73c975c9c38cef8b892f238c9f3376f3b0",
+      "ocr_engine": [
+        "tesseract"
+      ],
+      "ocr_block_count": 35,
+      "ocr_confidence": 0.605143,
+      "ocr_text": "DELIVERY\nNOTE\nInvoice\nNumber:\nINV.2026001\nPONumber:\nPO-2028.077\nSupplier\nAtlas\nTrading\nCa\nBuyer:\nNexa\nImports\nLid.\nDestination:\nJeddah\nQuantity\n500\n\u2018Tal\nAmount\nUSD\n18.500\nSKU\nDescription\n\u2014\nQty\nUnit\nTotal\nBG-100\nBaguette\nays\n500\n37\n18600",
+      "classification_confidence": 0.5,
+      "classification_evidence": [
+        "invoice"
+      ],
+      "fields": {
+        "invoice_number": {
+          "raw_value": "INV.2026001",
+          "normalized_value": "INV-2026001",
+          "confidence": 0.27,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "po_number": {
+          "raw_value": "PO-2028.077",
+          "normalized_value": "PO-2028-077",
+          "confidence": 0.43,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "supplier_name": {
+          "raw_value": "Atlas Trading Ca",
+          "normalized_value": "Atlas Trading Ca",
+          "confidence": 0.727,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "buyer_name": {
+          "raw_value": "Nexa Imports Lid.",
+          "normalized_value": "Nexa Imports Lid",
+          "confidence": 0.82,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "destination": {
+          "raw_value": "Jeddah",
+          "normalized_value": "Jeddah",
+          "confidence": 0.7,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "currency": {
+          "raw_value": "USD",
+          "normalized_value": "USD",
+          "confidence": 0.95,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "quantity": {
+          "raw_value": "500",
+          "normalized_value": 500,
+          "confidence": 0.663,
+          "source_page": 1,
+          "bbox": {},
+          "warnings": []
+        },
+        "line_items": {
+          "raw_value": [
+            {
+              "cells": [
+                "DELIVERY",
+                "NOTE"
+              ],
+              "raw_text": "DELIVERY | NOTE"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2028.077"
+              ],
+              "raw_text": "PONumber: | PO-2028.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "normalized_value": [
+            {
+              "cells": [
+                "DELIVERY",
+                "NOTE"
+              ],
+              "raw_text": "DELIVERY | NOTE"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2028.077"
+              ],
+              "raw_text": "PONumber: | PO-2028.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "confidence": 0.92,
+          "source_page": 1,
+          "bbox": {
+            "x": 86.0,
+            "y": 92.0,
+            "w": 206.0,
+            "h": 562.0
+          },
+          "warnings": [
+            "repaired_broken_numeric_or_amount_cells"
+          ]
+        }
+      },
+      "tables": [
+        {
+          "table_name": "reconstructed_table",
+          "columns": [
+            "col_1",
+            "col_2",
+            "col_3"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "DELIVERY",
+                "NOTE"
+              ],
+              "raw_text": "DELIVERY | NOTE"
+            },
+            {
+              "cells": [
+                "Invoice",
+                "Number:",
+                "INV.2026001"
+              ],
+              "raw_text": "Invoice | Number: | INV.2026001"
+            },
+            {
+              "cells": [
+                "PONumber:",
+                "PO-2028.077"
+              ],
+              "raw_text": "PONumber: | PO-2028.077"
+            },
+            {
+              "cells": [
+                "Supplier",
+                "Atlas",
+                "Trading",
+                "Ca"
+              ],
+              "raw_text": "Supplier | Atlas | Trading | Ca"
+            },
+            {
+              "cells": [
+                "Buyer:",
+                "Nexa",
+                "Imports",
+                "Lid."
+              ],
+              "raw_text": "Buyer: | Nexa | Imports | Lid."
+            },
+            {
+              "cells": [
+                "Destination:",
+                "Jeddah"
+              ],
+              "raw_text": "Destination: | Jeddah"
+            },
+            {
+              "cells": [
+                "Quantity",
+                "500"
+              ],
+              "raw_text": "Quantity | 500"
+            },
+            {
+              "cells": [
+                "\u2018Tal",
+                "Amount",
+                "USD 18.500"
+              ],
+              "raw_text": "\u2018Tal | Amount | USD | 18.500"
+            },
+            {
+              "cells": [
+                "SKU",
+                "Description",
+                "\u2014",
+                "Qty",
+                "Unit",
+                "Total"
+              ],
+              "raw_text": "SKU | Description | \u2014 | Qty | Unit | Total"
+            },
+            {
+              "cells": [
+                "BG-100",
+                "Baguette",
+                "ays",
+                "500",
+                "37",
+                "18600"
+              ],
+              "raw_text": "BG-100 | Baguette | ays | 500 | 37 | 18600"
+            }
+          ],
+          "header_row_index": null,
+          "confidence": 0.92,
+          "warnings": [
+            "repaired_broken_numeric_or_amount_cells"
+          ],
+          "source_page": 1,
+          "source_bbox": {
+            "x": 86.0,
+            "y": 92.0,
+            "w": 206.0,
+            "h": 562.0
+          },
+          "likely_totals_row": 8
+        }
+      ],
+      "missing_required_fields": [
+        "invoice_date",
+        "total_amount",
+        "subtotal",
+        "tax",
+        "discount",
+        "hs_code"
+      ],
+      "layout_region_count": 5,
+      "ground_truth_mismatches": {
+        "invoice_number": {
+          "expected": "INV-2026-001",
+          "actual": "INV-2026001"
+        },
+        "po_number": {
+          "expected": "PO-2026-077",
+          "actual": "PO-2028-077"
+        },
+        "supplier_name": {
+          "expected": "Atlas Trading Co.",
+          "actual": "Atlas Trading Ca"
+        },
+        "buyer_name": {
+          "expected": "Nexa Imports Ltd.",
+          "actual": "Nexa Imports Lid"
+        },
+        "total_amount": {
+          "expected": 18500,
+          "actual": null
+        }
+      },
+      "quality_score": 0.605143
+    }
+  ],
+  "reconciliation": {
+    "issues": [
+      {
+        "type": "duplicate_invoice_reference",
+        "severity": "medium",
+        "message": "Invoice number INV-2026001 appears in multiple documents/cases.",
+        "source_documents": [
+          "commercial_invoice",
+          "commercial_invoice"
+        ],
+        "recommended_action": "Check whether documents are duplicates or legitimate references.",
+        "evidence": {
+          "invoice_number": "INV-2026001"
+        },
+        "affected_fields": [
+          "invoice_number"
+        ],
+        "issue_type": "duplicate_invoice_reference"
+      },
+      {
+        "type": "duplicate_invoice_reference",
+        "severity": "medium",
+        "message": "Invoice number INV-2026001 appears in multiple documents/cases.",
+        "source_documents": [
+          "commercial_invoice",
+          "commercial_invoice"
+        ],
+        "recommended_action": "Check whether documents are duplicates or legitimate references.",
+        "evidence": {
+          "invoice_number": "INV-2026001"
+        },
+        "affected_fields": [
+          "invoice_number"
+        ],
+        "issue_type": "duplicate_invoice_reference"
+      },
+      {
+        "type": "duplicate_invoice_reference",
+        "severity": "medium",
+        "message": "Invoice number INV-2026001 appears in multiple documents/cases.",
+        "source_documents": [
+          "commercial_invoice",
+          "commercial_invoice"
+        ],
+        "recommended_action": "Check whether documents are duplicates or legitimate references.",
+        "evidence": {
+          "invoice_number": "INV-2026001"
+        },
+        "affected_fields": [
+          "invoice_number"
+        ],
+        "issue_type": "duplicate_invoice_reference"
+      },
+      {
+        "type": "duplicate_invoice_reference",
+        "severity": "medium",
+        "message": "Invoice number INV-2026001 appears in multiple documents/cases.",
+        "source_documents": [
+          "commercial_invoice",
+          "commercial_invoice"
+        ],
+        "recommended_action": "Check whether documents are duplicates or legitimate references.",
+        "evidence": {
+          "invoice_number": "INV-2026001"
+        },
+        "affected_fields": [
+          "invoice_number"
+        ],
+        "issue_type": "duplicate_invoice_reference"
+      },
+      {
+        "type": "duplicate_invoice_reference",
+        "severity": "medium",
+        "message": "Invoice number INV-2026001 appears in multiple documents/cases.",
+        "source_documents": [
+          "commercial_invoice",
+          "commercial_invoice"
+        ],
+        "recommended_action": "Check whether documents are duplicates or legitimate references.",
+        "evidence": {
+          "invoice_number": "INV-2026001"
+        },
+        "affected_fields": [
+          "invoice_number"
+        ],
+        "issue_type": "duplicate_invoice_reference"
+      },
+      {
+        "type": "missing_required_field",
+        "severity": "medium",
+        "message": "commercial_invoice is missing required field total_amount.",
+        "source_documents": [
+          "commercial_invoice"
+        ],
+        "recommended_action": "Send field to human review or improve extraction template.",
+        "evidence": {
+          "document": "commercial_invoice",
+          "field": "total_amount"
+        },
+        "affected_fields": [
+          "total_amount"
+        ],
+        "issue_type": "missing_required_field"
+      }
+    ],
+    "issue_count": 6,
+    "issue_types": [
+      "duplicate_invoice_reference",
+      "duplicate_invoice_reference",
+      "duplicate_invoice_reference",
+      "duplicate_invoice_reference",
+      "duplicate_invoice_reference",
+      "missing_required_field"
+    ]
+  },
+  "risk": {
+    "score": 100,
+    "level": "critical",
+    "top_factors": [
+      {
+        "type": "missing_required_field",
+        "field": "total_amount",
+        "points": 12,
+        "explanation": "commercial_invoice is missing total_amount."
+      },
+      {
+        "type": "missing_required_field",
+        "field": "total_amount",
+        "points": 12,
+        "explanation": "commercial_invoice is missing total_amount."
+      },
+      {
+        "type": "missing_required_field",
+        "field": "total_amount",
+        "points": 12,
+        "explanation": "commercial_invoice is missing total_amount."
+      },
+      {
+        "type": "missing_required_field",
+        "field": "total_amount",
+        "points": 12,
+        "explanation": "commercial_invoice is missing total_amount."
+      },
+      {
+        "type": "missing_required_field",
+        "field": "total_amount",
+        "points": 12,
+        "explanation": "commercial_invoice is missing total_amount."
+      }
+    ],
+    "factors": [
+      {
+        "type": "missing_required_field",
+        "field": "total_amount",
+        "points": 12,
+        "explanation": "commercial_invoice is missing total_amount."
+      },
+      {
+        "type": "low_confidence_fields",
+        "points": 10,
+        "average_confidence": 0.669,
+        "explanation": "Average field confidence is below review threshold."
+      },
+      {
+        "type": "missing_required_field",
+        "field": "total_amount",
+        "points": 12,
+        "explanation": "commercial_invoice is missing total_amount."
+      },
+      {
+        "type": "low_confidence_fields",
+        "points": 10,
+        "average_confidence": 0.649,
+        "explanation": "Average field confidence is below review threshold."
+      },
+      {
+        "type": "missing_required_field",
+        "field": "total_amount",
+        "points": 12,
+        "explanation": "commercial_invoice is missing total_amount."
+      },
+      {
+        "type": "low_confidence_fields",
+        "points": 10,
+        "average_confidence": 0.661,
+        "explanation": "Average field confidence is below review threshold."
+      },
+      {
+        "type": "missing_required_field",
+        "field": "total_amount",
+        "points": 12,
+        "explanation": "commercial_invoice is missing total_amount."
+      },
+      {
+        "type": "low_confidence_fields",
+        "points": 10,
+        "average_confidence": 0.696,
+        "explanation": "Average field confidence is below review threshold."
+      },
+      {
+        "type": "missing_required_field",
+        "field": "total_amount",
+        "points": 12,
+        "explanation": "commercial_invoice is missing total_amount."
+      },
+      {
+        "type": "low_confidence_fields",
+        "points": 10,
+        "average_confidence": 0.656,
+        "explanation": "Average field confidence is below review threshold."
+      },
+      {
+        "type": "missing_required_field",
+        "field": "total_amount",
+        "points": 12,
+        "explanation": "commercial_invoice is missing total_amount."
+      },
+      {
+        "type": "low_confidence_fields",
+        "points": 10,
+        "average_confidence": 0.685,
+        "explanation": "Average field confidence is below review threshold."
+      },
+      {
+        "type": "duplicate_invoice_reference",
+        "severity": "medium",
+        "points": 10,
+        "message": "Invoice number INV-2026001 appears in multiple documents/cases.",
+        "explanation": "Repeated invoice reference can indicate duplicate processing risk."
+      },
+      {
+        "type": "duplicate_invoice_reference",
+        "severity": "medium",
+        "points": 10,
+        "message": "Invoice number INV-2026001 appears in multiple documents/cases.",
+        "explanation": "Repeated invoice reference can indicate duplicate processing risk."
+      },
+      {
+        "type": "duplicate_invoice_reference",
+        "severity": "medium",
+        "points": 10,
+        "message": "Invoice number INV-2026001 appears in multiple documents/cases.",
+        "explanation": "Repeated invoice reference can indicate duplicate processing risk."
+      },
+      {
+        "type": "duplicate_invoice_reference",
+        "severity": "medium",
+        "points": 10,
+        "message": "Invoice number INV-2026001 appears in multiple documents/cases.",
+        "explanation": "Repeated invoice reference can indicate duplicate processing risk."
+      },
+      {
+        "type": "duplicate_invoice_reference",
+        "severity": "medium",
+        "points": 10,
+        "message": "Invoice number INV-2026001 appears in multiple documents/cases.",
+        "explanation": "Repeated invoice reference can indicate duplicate processing risk."
+      },
+      {
+        "type": "missing_required_field",
+        "severity": "medium",
+        "points": 12,
+        "message": "commercial_invoice is missing required field total_amount.",
+        "explanation": "Rule-based risk factor was triggered."
+      }
+    ],
+    "explanation": "Risk level is critical due mainly to: missing_required_field, missing_required_field, missing_required_field.",
+    "recommended_action": "Block approval until critical mismatches are resolved.",
+    "recommended_actions": [
+      "Block approval until critical mismatches are resolved."
+    ],
+    "confidence": 0.35
+  },
+  "outputs": {
+    "video": "docs\\animation\\runtime-evidence\\crossdoc-runtime.mp4",
+    "poster": "docs\\animation\\runtime-evidence\\crossdoc-runtime-poster.png",
+    "ocr_blocks_csv": "docs\\animation\\runtime-evidence\\crossdoc-ocr-blocks.csv",
+    "sha256": {
+      "docs\\animation\\runtime-evidence\\crossdoc-runtime.mp4": "d5b4b9cdc7c129a31489e037658147e8d97200388adaaf206e21b91e4736e80d",
+      "docs\\animation\\runtime-evidence\\crossdoc-runtime-poster.png": "461cd0436d2c93051be0b74200f680a7dc4ba50fca217f1e29f1ccb5e72d4417",
+      "docs\\animation\\runtime-evidence\\crossdoc-ocr-blocks.csv": "3bca9b0bb214645eaa097b66c81dfe0218c43abf1a02346a8ec1c724a237bc70"
+    }
+  },
+  "interpretation": [
+    "This trace uses real Tesseract OCR blocks from the committed clean PNG inputs; demo OCR was disabled.",
+    "The PDF validator remains a separate limitation because its rendered PDF fixture does not expose the expected text to OCR.",
+    "OCR mismatches against the committed ground truth are preserved and are not converted into passing metrics.",
+    "The input documents are synthetic test fixtures, not customer records or production accuracy evidence."
+  ]
+}
