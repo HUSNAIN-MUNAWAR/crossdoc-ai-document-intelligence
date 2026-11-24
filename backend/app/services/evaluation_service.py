@@ -3,6 +3,8 @@ from __future__ import annotations
 import csv
 import json
 import time
+import os
+import uuid
 from pathlib import Path
 from typing import Any
 
@@ -63,9 +65,21 @@ class EvaluationService:
         json_path = p / "evaluation_report.json"
         md_path = p / "evaluation_report.md"
         csv_path = p / "evaluation_summary.csv"
-        json_path.write_text(json.dumps(metrics, indent=2, default=str), encoding="utf-8")
+        self._atomic_write(json_path, json.dumps(metrics, indent=2, default=str))
         md_path.write_text("# CrossDoc AI Evaluation Report\n\nSynthetic evaluation report generated from local demo cases. Metrics are designed for regression tracking, not for claiming universal OCR performance.\n\n| Metric | Value |\n|---|---:|\n" + "\n".join(f"| {k.replace('_',' ').title()} | {json.dumps(v) if isinstance(v, dict) else v} |" for k, v in metrics.items()) + "\n", encoding="utf-8")
         with csv_path.open("w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f); writer.writerow(["metric", "value"])
             for k, v in metrics.items(): writer.writerow([k, json.dumps(v, default=str) if isinstance(v, dict) else v])
         return {"json": str(json_path), "markdown": str(md_path), "csv": str(csv_path)}
+
+    def _atomic_write(self, path: Path, content: str) -> None:
+        temporary = path.with_name(f".{path.name}.{uuid.uuid4().hex}.tmp")
+        try:
+            fd = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+            with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as handle:
+                handle.write(content)
+                handle.flush()
+                os.fsync(handle.fileno())
+            os.replace(temporary, path)
+        finally:
+            temporary.unlink(missing_ok=True)

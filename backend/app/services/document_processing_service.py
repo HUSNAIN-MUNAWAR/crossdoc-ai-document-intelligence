@@ -55,11 +55,13 @@ class DocumentProcessingService:
         db.commit()
 
         workspace = self.settings.storage_path / "processed" / str(document.id)
-        pages = self.loader.load_pages(document.storage_path, workspace / "pages")
         all_blocks = []
         quality_scores: list[float] = []
 
         try:
+            # Keep loading inside the failure boundary so corrupt PDFs/images
+            # leave an explicit failed document state instead of stuck processing.
+            pages = self.loader.load_pages(document.storage_path, workspace / "pages")
             for page in pages:
                 source_path = Path(page["image_path"])
                 prepared_path = workspace / "preprocessed" / source_path.name
